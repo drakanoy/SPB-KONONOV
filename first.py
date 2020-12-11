@@ -1,6 +1,7 @@
 import pygame
 from random import randint
 
+
 class Board:
     # создание поля
     def __init__(self, width, height):
@@ -26,7 +27,7 @@ class Board:
                 if self.board[line][cell] == 0:
                     pygame.draw.rect(screen, 'yellow', (x, y, self.cell_size, self.cell_size), 2)
                 else:
-
+                    pygame.draw.rect(screen, 'yellow', (x, y, self.cell_size, self.cell_size), 2)
                     pygame.draw.rect(screen, 'yellow', (x, y, self.cell_size, self.cell_size))
 
     def get_cell(self, mouse_x, mouse_y):
@@ -35,16 +36,17 @@ class Board:
         return (line, cell)
 
     def on_click(self, line, cell):
-        if self.board[line][cell] == 0:
-            self.board[line][cell] = 1
-        else:
-            self.board[line][cell] = 0
+        if line < self.height and cell < self.width:
+            if self.board[line][cell] == 0:
+                self.board[line][cell] = 1
+            else:
+                self.board[line][cell] = 0
 
 
-size = width, height = 400, 400
+size = width, height = 1000, 1000
 screen = pygame.display.set_mode(size)
 clock = pygame.time.Clock()
-board = Board(5, 7)
+board = Board(10, 10)  # здесь можно менять табличку
 
 running = True
 while running:
