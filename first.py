@@ -24,8 +24,11 @@ class Board:
             for cell in range(self.width):
                 x = self.left + cell * (self.cell_size)
                 y = self.top + line * (self.cell_size)
+                a = randint(0, 255)
+                b = randint(0, 255)
+                c = randint(0, 255)
                 if self.board[line][cell] == 0:
-                    pygame.draw.rect(screen, 'yellow', (x, y, self.cell_size, self.cell_size), 2)
+                    pygame.draw.rect(screen, (a, b, c), (x, y, self.cell_size, self.cell_size), 2)
                 else:
                     pygame.draw.rect(screen, 'yellow', (x, y, self.cell_size, self.cell_size), 2)
                     pygame.draw.rect(screen, 'yellow', (x, y, self.cell_size, self.cell_size))
