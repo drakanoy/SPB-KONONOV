@@ -27,7 +27,7 @@ class Board:
                 red = randint(0, 155)
                 green = randint(0, 255)
                 blue = randint(0, 255)
-                if self.board[line][cell] != 0:
+                if self.board[line][cell] == 0:
                     pygame.draw.rect(screen, (red, green, 255), (x, y, self.cell_size, self.cell_size), 2)
                 else:
                     pygame.draw.rect(screen, (red, green, 255), (x, y, self.cell_size, self.cell_size), 2)
