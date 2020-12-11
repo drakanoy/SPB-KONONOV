@@ -30,8 +30,8 @@ class Board:
                 if self.board[line][cell] == 0:
                     pygame.draw.rect(screen, (a, b, c), (x, y, self.cell_size, self.cell_size), 2)
                 else:
-                    pygame.draw.rect(screen, 'yellow', (x, y, self.cell_size, self.cell_size), 2)
-                    pygame.draw.rect(screen, 'yellow', (x, y, self.cell_size, self.cell_size))
+                    pygame.draw.rect(screen, (a, b, c), (x, y, self.cell_size, self.cell_size), 2)
+                    pygame.draw.rect(screen, (a, b, c), (x, y, self.cell_size, self.cell_size))
 
     def get_cell(self, mouse_x, mouse_y):
         cell = (mouse_x - self.left) // self.cell_size
