@@ -46,7 +46,7 @@ class Board:
                 self.board[line][cell] = 0
 
 
-size = width, height = 1000, 1000
+size = width, height = 700, 700
 screen = pygame.display.set_mode(size)
 clock = pygame.time.Clock()
 board = Board(10, 10)  # здесь можно менять табличку
